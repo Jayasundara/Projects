@@ -7,3 +7,4 @@ links.forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');me
 const reveal=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');reveal.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>reveal.observe(e));
 const sectionObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -50% 0px'});document.querySelectorAll('main section[id]').forEach(s=>sectionObs.observe(s));
 addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>8),{passive:true});document.querySelector('#year').textContent=new Date().getFullYear();
+const vmwareArchitecture=document.querySelector('img[src="assets/vmware-infrastructure-architecture.jpg"]');if(vmwareArchitecture)vmwareArchitecture.src='assets/vmware-infrastructure-architecture.png';
