@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Employee Onboarding Request Automation project using Microsoft Power Automate, Forms, SharePoint, approvals and Jira.">
+  <meta name="theme-color" content="#07101f">
+  <title>Employee Onboarding Request Automation | Rajarathna Jayasundara</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <style>
+    .project-hero{padding:88px 0 62px;position:relative;overflow:hidden}
+    .project-hero .container,.content-wrap{max-width:1100px}
+    .back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-weight:800;font-size:14px;margin-bottom:28px}
+    .back:hover{color:var(--text)}
+    .project-hero h1{font-size:clamp(3rem,7vw,6rem);max-width:980px;margin:18px 0 24px}
+    .project-hero .lead{max-width:950px}
+    .status-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+    .status{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--panel);border-radius:99px;padding:8px 13px;font-size:13px;font-weight:800;color:var(--muted)}
+    .status i{width:8px;height:8px;border-radius:50%;background:var(--a)}
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
+    .fact{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:20px}
+    .fact b,.fact span{display:block}.fact span{font-size:12px;color:var(--muted);margin-bottom:7px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}.fact b{font-size:15px}
+    .prose h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.045em;margin:0 0 16px}
+    .prose h3{font-size:1.2rem;margin:26px 0 10px}.prose p,.prose li,.prose td,.prose th{color:var(--muted)}.prose ul{padding-left:22px}
+    .diagram-card,.card-block,.flow-block,.table-wrap{border:1px solid var(--line);background:var(--panel);border-radius:24px;padding:24px}
+    .diagram-card img{width:100%;height:auto;border-radius:18px;display:block;background:#fff}
+    .caption{margin-top:14px;font-size:14px;color:var(--muted);text-align:center}
+    .two-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card-block h3{margin-top:0}
+    .steps{display:grid;gap:12px}.step{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;padding:17px;border:1px solid var(--line);border-radius:18px}.step strong{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--soft);color:var(--a)}.step b{display:block;color:var(--text);margin-bottom:5px}
+    table{width:100%;border-collapse:collapse}th,td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{color:var(--text);font-size:14px}
+    .outcomes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.outcome{border-top:1px solid var(--line);padding-top:16px}.outcome b{display:block;color:var(--text);margin-bottom:6px}
+    .project-nav{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding-top:34px;margin-top:50px}.project-nav p{margin:0;color:var(--muted)}
+    @media(max-width:980px){.facts{grid-template-columns:repeat(2,1fr)}.two-grid,.three-grid,.outcomes{grid-template-columns:1fr}}
+    @media(max-width:560px){.facts{grid-template-columns:1fr}.diagram-card,.card-block,.flow-block,.table-wrap{padding:18px}.project-nav{align-items:flex-start;flex-direction:column}.step{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header id="top">
+    <div class="container nav">
+      <a class="brand" href="index.html"><b>R</b><span>Rajarathna Jayasundara</span></a>
+      <nav id="siteNav" aria-label="Main navigation"><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#projects">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+      <button id="themeBtn" class="icon-btn" aria-label="Switch theme">☼</button>
+      <button id="menuBtn" class="menu" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="project-hero">
+      <div class="glow glow-a"></div>
+      <div class="container reveal">
+        <a class="back" href="index.html#projects">← Back to projects</a>
+        <p class="pill"><span></span> Completed Automation Project</p>
+        <h1>Employee Onboarding <em>Request Automation</em></h1>
+        <p class="lead">Automated the employee onboarding request process using Microsoft Power Automate to collect complete employee, access, software, licensing and cost requirements; provide IT early visibility; enforce HOD approval; and automatically create the final Jira onboarding ticket.</p>
+        <div class="status-row"><span class="status"><i></i> Project Status: Completed</span><span class="status">Microsoft Power Automate</span><span class="status">Approval-driven workflow</span><span class="status">Jira automation</span></div>
+        <div class="facts">
+          <div class="fact"><span>Workflow Platform</span><b>Microsoft Power Automate</b></div>
+          <div class="fact"><span>Data Capture</span><b>Microsoft Forms</b></div>
+          <div class="fact"><span>Tracking</span><b>SharePoint List</b></div>
+          <div class="fact"><span>Final Ticket</span><b>Jira Onboarding Board</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>01 / Project Background</small><h2>Replacing manual onboarding coordination.</h2></div>
+        <p>The existing onboarding process required multiple manual exchanges between P&amp;C, the employee's manager, HOD approvers and IT. Important system-access requirements, software needs and cost details could be missing when the onboarding ticket reached IT, creating delays and additional clarification work.</p>
+        <p>The project introduced a structured workflow that collected the required information in sequence and created the IT onboarding ticket only after the required approval was completed.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>02 / Project Requirements</small><h2>What the automation needed to achieve.</h2></div>
+        <div class="two-grid">
+          <div class="card-block"><h3>Process & Data Collection</h3><ul><li>Fast-track onboarding ticket creation and reduce manual email follow-up.</li><li>Collect basic employee information from P&amp;C first.</li><li>Collect system access, application, software/license and cost requirements from the hiring manager.</li><li>Provide IT with early visibility that a new onboarding request was in progress.</li></ul></div>
+          <div class="card-block"><h3>Approval & Ticket Automation</h3><ul><li>Route access requirements and associated costs to the appropriate HOD for approval.</li><li>Create a Jira onboarding ticket automatically after HOD approval.</li><li>Notify P&amp;C / HR when the onboarding ticket had been created.</li><li>Support rejection handling so requests could be corrected or reviewed.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>03 / Implemented Automation Platform</small><h2>Power Automate as the orchestration layer.</h2></div>
+        <p>Microsoft Power Automate connected form submissions, SharePoint tracking, email notifications, approvals, IT alerting and Jira ticket creation so the onboarding request could move through the process without manual hand-offs between systems.</p>
+        <div class="three-grid">
+          <div class="card-block"><h3>Microsoft Forms</h3><p>Form 1 captured P&amp;C / HR employee details. Form 2 captured manager-provided system access, software, licensing and cost requirements.</p></div>
+          <div class="card-block"><h3>SharePoint Tracking</h3><p>A central SharePoint record was created at the start and updated throughout the process, giving the workflow one consistent tracking source.</p></div>
+          <div class="card-block"><h3>Approvals & Jira</h3><p>HOD approval was enforced before Power Automate automatically created the onboarding ticket on the Jira board.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>04 / Completed Process Diagram</small><h2>Employee onboarding request flow.</h2><p>The original completed workflow diagram is displayed below exactly from the repository asset.</p></div>
+        <div class="diagram-card"><img src="./assets/onboarding_power_automate_flow.png?v=20260909-1" alt="Employee Onboarding Request Flow - Power Automate showing HR and P&C, manager, IT Systems, HOD approval, SharePoint tracking, Jira ticket creation and notifications."><p class="caption">Figure 1. Employee Onboarding Request Flow - Power Automate</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>05 / Completed Workflow</small><h2>End-to-end automation sequence.</h2></div>
+        <div class="flow-block"><div class="steps">
+          <div class="step"><strong>1</strong><div><b>P&amp;C submits Form 1</b><span>P&amp;C entered the employee's basic onboarding information using the first Microsoft Form.</span></div></div>
+          <div class="step"><strong>2</strong><div><b>SharePoint tracking record created</b><span>Power Automate created the onboarding request record in the SharePoint list.</span></div></div>
+          <div class="step"><strong>3</strong><div><b>Manager receives Form 2</b><span>Power Automate emailed the employee's manager with the basic details and a link to the second form.</span></div></div>
+          <div class="step"><strong>4</strong><div><b>Manager provides requirements</b><span>The manager submitted system access, application, software/license and cost details.</span></div></div>
+          <div class="step"><strong>5</strong><div><b>SharePoint record updated & IT alerted</b><span>The same tracking record was updated with the manager's requirements and IT received an automated in-progress alert for early preparation.</span></div></div>
+          <div class="step"><strong>6</strong><div><b>HOD approval</b><span>System-access requirements and associated costs were submitted to the Head of Department for approval.</span></div></div>
+          <div class="step"><strong>7</strong><div><b>Jira ticket created automatically</b><span>After approval, Power Automate created the onboarding ticket on the Jira board using the collected details.</span></div></div>
+          <div class="step"><strong>8</strong><div><b>HR / P&amp;C notified</b><span>P&amp;C / HR received an automated confirmation that the Jira onboarding ticket had been created.</span></div></div>
+          <div class="step"><strong>9</strong><div><b>Rejection handling</b><span>If rejected, the workflow could notify the relevant stakeholders so the request could be corrected or reviewed.</span></div></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>06 / Key Technical Components</small><h2>Technology used in the solution.</h2></div>
+        <div class="table-wrap"><table><thead><tr><th>Component</th><th>Role in the Solution</th></tr></thead><tbody>
+          <tr><td>Microsoft Power Automate</td><td>Orchestrated triggers, SharePoint updates, approvals, notifications and Jira ticket creation.</td></tr>
+          <tr><td>Microsoft Forms - Form 1</td><td>Captured P&amp;C / HR basic employee and onboarding information.</td></tr>
+          <tr><td>Microsoft Forms - Form 2</td><td>Captured manager-provided system access, software/license and cost requirements.</td></tr>
+          <tr><td>SharePoint List</td><td>Stored and tracked the onboarding request while the workflow progressed through each stage.</td></tr>
+          <tr><td>Email Notifications</td><td>Sent the manager form link, IT in-progress alert and HR completion notification.</td></tr>
+          <tr><td>Power Automate Approvals</td><td>Submitted the completed access and cost requirements to the HOD for approval or rejection.</td></tr>
+          <tr><td>Jira</td><td>Received the automatically created onboarding ticket after successful HOD approval.</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>07 / SharePoint Tracking Design</small><h2>A single source of workflow status.</h2></div>
+        <p>A SharePoint list was used as the central tracking record for the onboarding workflow. The first form submission created the record, and the manager submission updated the same record with system access and cost requirements.</p>
+        <p>This provided one source of status information while the request moved from P&amp;C to the manager, IT, HOD approval and Jira.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>08 / Approval and Ticket Creation</small><h2>Provisioning only after approval.</h2></div>
+        <p>The HOD approval stage ensured that requested access and associated costs were reviewed before IT received the final implementation ticket. Power Automate handled the approval outcome.</p>
+        <div class="two-grid">
+          <div class="card-block"><h3>Approved</h3><p>Approved requests were converted automatically into Jira onboarding tickets containing the collected onboarding, access, software and cost details.</p></div>
+          <div class="card-block"><h3>Rejected</h3><p>Rejected requests could be returned to the appropriate stakeholders for correction or review instead of creating an incomplete IT implementation ticket.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>09 / Technical Summary</small><h2>A structured, trackable onboarding workflow.</h2></div>
+        <p>P&amp;C initiated the process by submitting structured new-employee information. Power Automate created a SharePoint tracking record and automatically emailed the hiring manager with the employee details and Form 2. The manager supplied system access, software, license, application and cost information, after which Power Automate updated the same SharePoint record and gave IT early notification that onboarding was in progress.</p>
+        <p>The completed requirements were then routed to the HOD for approval. Once approved, Power Automate automatically created the onboarding ticket on the Jira board and notified P&amp;C / HR. The completed design improved data completeness, provided earlier IT visibility, reduced manual follow-up and enforced approval before provisioning.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>10 / Project Outcomes</small><h2>Operational improvements delivered.</h2></div>
+        <div class="outcomes">
+          <div class="outcome"><b>Reduced Manual Coordination</b><span>Reduced manual coordination between P&amp;C, managers, HODs and IT.</span></div>
+          <div class="outcome"><b>More Complete Requests</b><span>Collected required employee and access information before ticket creation.</span></div>
+          <div class="outcome"><b>Early IT Visibility</b><span>Provided IT with advance visibility of onboarding requests in progress.</span></div>
+          <div class="outcome"><b>Formal Approval</b><span>Introduced an approval step for system-access requirements and associated costs.</span></div>
+          <div class="outcome"><b>Automatic Jira Creation</b><span>Automatically created Jira onboarding tickets after approval.</span></div>
+          <div class="outcome"><b>Centralized Tracking</b><span>Improved onboarding tracking through a centralized SharePoint record.</span></div>
+          <div class="outcome"><b>Faster Processing</b><span>Improved processing speed and reduced repeated clarification cycles.</span></div>
+          <div class="outcome"><b>Consistency & Auditability</b><span>Created a structured and repeatable process with better traceability.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-wrap prose reveal">
+        <div class="heading"><small>11 / Project Closure</small><h2>Implementation completed successfully.</h2></div>
+        <div class="card-block"><p>The onboarding request automation established a structured, trackable and approval-driven process from the initial P&amp;C request through manager input, IT notification, HOD approval, automatic Jira ticket creation and final HR notification.</p><p><strong>Implementation Status:</strong> COMPLETED</p></div>
+        <div class="project-nav"><p>Microsoft Power Automate · Microsoft Forms · SharePoint · Approvals · Jira</p><a class="btn primary" href="index.html#projects">Back to Portfolio</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>© <span id="year"></span> Rajarathna Jayasundara. Built for GitHub Pages.</p><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>
