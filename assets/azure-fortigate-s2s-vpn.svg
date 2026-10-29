@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Hybrid Azure Site-to-Site VPN Architecture</title>
+  <desc id="desc">Sanitized architecture showing an on-premises server behind a FortiGate firewall and upstream NAT connecting through an IPsec IKEv2 tunnel to Azure VPN Gateway and two Azure servers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fbff"/><stop offset="1" stop-color="#eef6ff"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0b1f33" flood-opacity=".12"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2774c8"/></marker>
+  </defs>
+  <rect width="1400" height="620" rx="28" fill="url(#bg)"/>
+  <text x="700" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#13253a">Hybrid Site-to-Site VPN Architecture</text>
+  <text x="700" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#65758a">Sanitized portfolio architecture — addresses, endpoints and secrets intentionally omitted</text>
+
+  <rect x="42" y="120" width="500" height="420" rx="24" fill="#fff9f2" stroke="#e39b46" stroke-width="2"/>
+  <text x="72" y="158" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#9a5b19">On-Premises Environment</text>
+
+  <rect x="78" y="250" width="150" height="88" rx="14" fill="#fff" stroke="#b9c6d4" filter="url(#shadow)"/>
+  <text x="153" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#22384f">On-Premises</text>
+  <text x="153" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#22384f">Server</text>
+
+  <rect x="270" y="250" width="150" height="88" rx="14" fill="#fff" stroke="#df8b82" filter="url(#shadow)"/>
+  <text x="345" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#8a3a32">FortiGate</text>
+  <text x="345" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#8a3a32">Firewall</text>
+
+  <rect x="444" y="250" width="70" height="88" rx="14" fill="#fff" stroke="#b9c6d4" filter="url(#shadow)"/>
+  <text x="479" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#22384f">Upstream</text>
+  <text x="479" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#22384f">NAT</text>
+
+  <line x1="228" y1="294" x2="270" y2="294" stroke="#2774c8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="420" y1="294" x2="444" y2="294" stroke="#2774c8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="292" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6b7480">Route-based VPN • Static routing</text>
+  <text x="292" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6b7480">Bidirectional firewall policies • NAT disabled across VPN</text>
+
+  <circle cx="650" cy="294" r="72" fill="#dff4ff" stroke="#58a9d6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#24678e">Internet</text>
+  <line x1="514" y1="294" x2="578" y2="294" stroke="#2774c8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="742" y="244" width="142" height="100" rx="16" fill="#e8fff7" stroke="#42b894" stroke-width="2" filter="url(#shadow)"/>
+  <text x="813" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#23866a">IPsec / IKEv2</text>
+  <text x="813" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#23866a">NAT-T</text>
+  <line x1="722" y1="294" x2="742" y2="294" stroke="#2774c8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="918" y="120" width="440" height="420" rx="24" fill="#f2f7ff" stroke="#4c88da" stroke-width="2"/>
+  <text x="948" y="158" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#245a9b">Microsoft Azure</text>
+
+  <rect x="958" y="244" width="158" height="100" rx="16" fill="#fff" stroke="#6f9ed8" filter="url(#shadow)"/>
+  <text x="1037" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#245a9b">Azure VPN</text>
+  <text x="1037" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#245a9b">Gateway</text>
+  <line x1="884" y1="294" x2="958" y2="294" stroke="#2774c8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="1185" y="205" width="132" height="72" rx="14" fill="#fff" stroke="#8aa8cd" filter="url(#shadow)"/>
+  <text x="1251" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#22384f">Azure Server 1</text>
+  <rect x="1185" y="320" width="132" height="72" rx="14" fill="#fff" stroke="#8aa8cd" filter="url(#shadow)"/>
+  <text x="1251" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#22384f">Azure Server 2</text>
+  <line x1="1116" y1="278" x2="1185" y2="242" stroke="#2774c8" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1116" y1="310" x2="1185" y2="354" stroke="#2774c8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="1138" y="447" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#62718a">GatewaySubnet • Local Network Gateway • NSGs</text>
+  <text x="1138" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#62718a">Private workload routing and security controls</text>
+
+  <text x="700" y="582" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#42566d">Goal: secure private bidirectional connectivity between on-premises workloads and Azure without directly publishing internal services to the Internet.</text>
+</svg>
