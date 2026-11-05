@@ -109,6 +109,6 @@ if (contactCopy && !contactCopy.querySelector('.contact-details')) {
   const details = document.createElement('div');
   details.className = 'contact-details';
   details.style.cssText = 'display:flex;flex-wrap:wrap;gap:18px;margin-top:18px;font-weight:800;';
-  details.innerHTML = '<a href="mailto:rajarathna.jay@cymax.com" style="color:var(--text);text-decoration:none;">✉ rajarathna.jay@cymax.com</a><a href="tel:+16049081755" style="color:var(--text);text-decoration:none;">☎ +1 604 908 1755</a>';
+  details.innerHTML = '<a href="mailto:rajarathna.jay@gmail.com" style="color:var(--text);text-decoration:none;">✉ rajarathna.jay@gmail.com</a><a href="tel:+16049081755" style="color:var(--text);text-decoration:none;">☎ +1 604 908 1755</a>';
   contactCopy.appendChild(details);
 }
