@@ -1,7 +1,7 @@
 // Global privacy-friendly analytics loader (Cloudflare Web Analytics).
 // Add the site token from Cloudflare Web Analytics below to enable tracking on every page
 // that loads this shared script.js file.
-const CLOUDFLARE_WEB_ANALYTICS_TOKEN = '';
+const CLOUDFLARE_WEB_ANALYTICS_TOKEN = '4833701ad6d84b6bbd956869f764388b';
 
 if (
   CLOUDFLARE_WEB_ANALYTICS_TOKEN &&
