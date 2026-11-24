@@ -43,7 +43,7 @@ if (siteFooter && !siteFooter.querySelector('.privacy-note')) {
   const privacyNote = document.createElement('p');
   privacyNote.className = 'privacy-note';
   privacyNote.style.cssText = 'font-size:12px;opacity:.68;margin-top:10px;max-width:780px;';
-  privacyNote.textContent = 'This site uses analytics and may log basic access information, including IP address and approximate location, for security and site analytics.';
+  privacyNote.textContent = 'This site uses privacy-friendly analytics to record basic visit information such as page views, referrers, and timestamps.';
   siteFooter.appendChild(privacyNote);
 }
 
