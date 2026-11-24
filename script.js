@@ -1,3 +1,22 @@
+// Global privacy-friendly analytics loader (Cloudflare Web Analytics).
+// Add the site token from Cloudflare Web Analytics below to enable tracking on every page
+// that loads this shared script.js file.
+const CLOUDFLARE_WEB_ANALYTICS_TOKEN = '';
+
+if (
+  CLOUDFLARE_WEB_ANALYTICS_TOKEN &&
+  !document.querySelector('script[data-cf-beacon]')
+) {
+  const analyticsBeacon = document.createElement('script');
+  analyticsBeacon.defer = true;
+  analyticsBeacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  analyticsBeacon.setAttribute(
+    'data-cf-beacon',
+    JSON.stringify({ token: CLOUDFLARE_WEB_ANALYTICS_TOKEN })
+  );
+  document.head.appendChild(analyticsBeacon);
+}
+
 const root = document.documentElement;
 const header = document.querySelector('header');
 const nav = document.querySelector('#siteNav');
