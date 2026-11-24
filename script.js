@@ -21,7 +21,7 @@ if (
 // Optional Cloudflare Worker visit logger.
 // Set this to your deployed workers.dev endpoint to record page visits server-side.
 // The Worker, not this browser script, should read the visitor IP from CF-Connecting-IP.
-const PORTFOLIO_VISIT_LOGGER_ENDPOINT = '';
+const PORTFOLIO_VISIT_LOGGER_ENDPOINT = 'https://portfolio-visitor-logger.jayasundara1994.workers.dev/';
 
 if (PORTFOLIO_VISIT_LOGGER_ENDPOINT) {
   fetch(PORTFOLIO_VISIT_LOGGER_ENDPOINT, {
@@ -30,7 +30,8 @@ if (PORTFOLIO_VISIT_LOGGER_ENDPOINT) {
     body: JSON.stringify({
       page: window.location.pathname,
       referrer: document.referrer || '',
-      title: document.title
+      title: document.title,
+      timestamp: new Date().toISOString()
     }),
     keepalive: true
   }).catch(() => {});
