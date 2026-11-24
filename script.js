@@ -17,6 +17,35 @@ if (
   document.head.appendChild(analyticsBeacon);
 }
 
+
+// Optional Cloudflare Worker visit logger.
+// Set this to your deployed workers.dev endpoint to record page visits server-side.
+// The Worker, not this browser script, should read the visitor IP from CF-Connecting-IP.
+const PORTFOLIO_VISIT_LOGGER_ENDPOINT = '';
+
+if (PORTFOLIO_VISIT_LOGGER_ENDPOINT) {
+  fetch(PORTFOLIO_VISIT_LOGGER_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      page: window.location.pathname,
+      referrer: document.referrer || '',
+      title: document.title
+    }),
+    keepalive: true
+  }).catch(() => {});
+}
+
+// Small disclosure shown on every page that loads this shared script.
+const siteFooter = document.querySelector('footer .container');
+if (siteFooter && !siteFooter.querySelector('.privacy-note')) {
+  const privacyNote = document.createElement('p');
+  privacyNote.className = 'privacy-note';
+  privacyNote.style.cssText = 'font-size:12px;opacity:.68;margin-top:10px;max-width:780px;';
+  privacyNote.textContent = 'This site uses analytics and may log basic access information, including IP address and approximate location, for security and site analytics.';
+  siteFooter.appendChild(privacyNote);
+}
+
 const root = document.documentElement;
 const header = document.querySelector('header');
 const nav = document.querySelector('#siteNav');
